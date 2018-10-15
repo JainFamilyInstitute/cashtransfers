@@ -15,3 +15,6 @@ d3.js force layout that intakes the data/data.json file with two levels of paren
 
 ## 4. index.html
 root page that can be used to embed the visualization in iframes
+
+## 5. assets
+native design file and image files for the icons used in the visualization
