@@ -6,7 +6,7 @@ function caps(string) {
 var tcBlack = "#130C0E";
 
 // rest of vars
-var w = window.innerWidth,
+var w = window.innerWidth/1.5,
     h = window.innerHeight,
     maxNodeSize = 1,
     x_browser = 20,
@@ -83,7 +83,7 @@ json.forEach(function(d){
  
   root = newData;
   root.fixed = true;
-  root.x = w / 3;
+  root.x = w /2 ;
   root.y = h / 2;
 
   flatten(root);
@@ -113,7 +113,7 @@ function update() {
         .links(links)
         .gravity(0.005)
     .charge(-1200)
-    .linkDistance(5)
+    .linkDistance(1)
     .friction(0.2)
     .linkStrength(function(l, i) {return 1; })
     .size([w, h])
