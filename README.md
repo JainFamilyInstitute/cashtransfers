@@ -3,7 +3,7 @@
 scripts and data visualization for visualizing documents about cash transfers by type and effect.
 
 ## 1. data/data2.csv
-this is the original data source supplied by sidhya and gary, saved as a csv from data/data2.xlsx
+this is the original data source supplied by sidhya and gary
 
 ## 2. data/document_categorization.ipynb and data_structure.ipynb > data/data_modified.csv and data/data.json
 Recoding of document categories into dummy variables is done through document_categorization.ipynb, resulting in data/data2_modified.csv
