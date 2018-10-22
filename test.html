@@ -5,11 +5,9 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
   <title>The Phenomenal World | Visualization Test</title>
   <meta name="description" content="The Whole Mind by Jain Family Institute.">
-
-  <link rel="stylesheet" href="https://pw-dev.jainfamilyinstitute.org/assets/css/app.css">
+  <link rel="stylesheet" href="jfi-styles.css">
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/zepto.waypoints.min.js"></script>
@@ -20,21 +18,7 @@
   </script>
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <script src="https://pw-dev.jainfamilyinstitute.org/assets/js/app.js"></script>
-  <!-- Matomo -->
-  <script type="text/javascript">
-    var _paq = _paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//pw-dev.jainfamilyinstitute.org/piwik/";
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-  <!-- End Matomo Code -->
+
 <style>
 @font-face {
   font-family: 'CMU Serif';
@@ -124,6 +108,15 @@ h1 {
 #show-search {
   font-family:'CMU Serif', serif;
 }
+@media screen and (max-width:768px){
+  .iframe-wrap {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 0%;
+      height: 0;
+      background-color:white;
+  }
+}
 </style>
 </head>
 <body>
@@ -143,7 +136,7 @@ h1 {
   </ul>
 
   <div id="jfi-icon" class="xs-hide">
-    <a href="https://pw-dev.jainfamilyinstitute.org"><img src="/assets/images/jfi-icon.svg" alt=""></a>
+    <a href="https://pw-dev.jainfamilyinstitute.org"><img src="" alt=""></a>
   </div>
 
   <main class="main m3" role="main">
@@ -180,13 +173,13 @@ h1 {
         <div class="text col col-12 md-col-6">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 <h2>Tax Credits</h2>
-<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><iframe src="taxcredits.html" height="80vh" scrolling="no" style="transform:scale(1);"></iframe>
+<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><iframe src="taxcredits.html"   scrolling="no" style="transform:scale(1);"></iframe>
 <h2>Cash Transfers</h2>
-<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><iframe src="ct.html" height="80vh" scrolling="no" style="transform:scale(1);"></iframe>
+<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><iframe src="ct.html"   scrolling="no" style="transform:scale(1);"></iframe>
 <h2>Universal Basic Income</h2>
-<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><iframe src="ubi.html" height="80vh" scrolling="no" style="transform:scale(1);"></iframe>
+<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><iframe src="ubi.html"   scrolling="no" style="transform:scale(1);"></iframe>
 <h2>All</h2>
-<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><iframe src="index.html" height="80vh" scrolling="no" style="transform:scale(1);"></iframe>
+<div class="expand-visualization sans type-s"><span class="expand">Expand</span><span class="close">Close</span></div><div class="iframe-wrap"><iframe src="index.html" width="640" height="360" scrolling="no"></iframe></div>
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>          <div class="meta p1 m1 mt3">
 	<table class="meta-table">
