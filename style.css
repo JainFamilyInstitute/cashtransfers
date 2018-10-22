@@ -213,12 +213,12 @@ path.link {
 
  }
 
- @media screen and (max-width:650px){
+ @media screen and (max-width:900px){
+
   .header {
     width:80%;
     height:65%;
     overflow-y:scroll;
-/*    border: 0.05em solid;*/
     margin:5%;
     padding:5%;
     border-radius:0.5em;
@@ -267,4 +267,5 @@ path.link {
       height:65%;
     }
   }
+
  }
