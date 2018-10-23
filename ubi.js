@@ -10,7 +10,7 @@ function caps(string) {
 var tcBlack = "#130C0E";
 
 // rest of vars
-if(window.innerWidth<=650){
+if(window.innerWidth<=1650){
 
   var w = window.innerWidth,
     h = window.innerHeight,
