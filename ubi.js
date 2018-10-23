@@ -55,7 +55,7 @@ d3.json("https://raw.githubusercontent.com/3milychu/cashtransfers/master/data/da
 
 var newData = { name :"root", 
       path: "3_root", 
-      size: 85000,
+      size: 120000,
       children : [] },
     levels = ["path"];
 
@@ -121,9 +121,9 @@ function update() {
   force.nodes(nodes)
         .links(links)
         .gravity(0.005)
-    .charge(-1000)
+    .charge(-500)
     .linkDistance(20)
-    .friction(0.5)
+    .friction(0.4)
     .linkStrength(function(l, i) {return 1; })
     .size([w, h])
     .on("tick", tick)
@@ -161,10 +161,10 @@ function update() {
   // Append images
   var images = nodeEnter.append("svg:image")
         .attr("xlink:href",  function(d) { return "assets/"+d.path+".png";})
-        .attr("x", function(d) { return -(d.size/2500);})
-        .attr("y", function(d) { return -(d.size/2500);})
-        .attr("height", function(d) {return d.size / 1000;})
-        .attr("width", function(d) {return d.size / 1000;});
+        .attr("x", function(d) { return -(d.size/3000);})
+        .attr("y", function(d) { return -(d.size/3000);})
+        .attr("height", function(d) {return d.size / 1500;})
+        .attr("width", function(d) {return d.size / 1500;});
         
 // Toggle details on and off by iframe view
 details = document.getElementById('header');
@@ -244,19 +244,19 @@ function detailsOn() {
             // select element in current context
             d3.select( this )
               .transition()
-              .attr("x", function(d) { return -(d.size/2000);})
-              .attr("y", function(d) { return -(d.size/2000);})
-              .attr("height", function(d) {return d.size / 1000 + 10;})
-              .attr("width", function(d) {return d.size / 1000 + 10;});
+              .attr("x", function(d) { return -(d.size/2500);})
+              .attr("y", function(d) { return -(d.size/2500);})
+              .attr("height", function(d) {return d.size / 1500 + 10;})
+              .attr("width", function(d) {return d.size / 1500 + 10;});
           })
           // set back
           .on( 'mouseleave', function() {
             d3.select( this )
               .transition()
-              .attr("x", function(d) { return -(d.size/2500);})
-              .attr("y", function(d) { return -(d.size/2500);})
-              .attr("height", function(d) {return d.size / 1000;})
-              .attr("width", function(d) {return d.size / 1000;});
+              .attr("x", function(d) { return -(d.size/3000);})
+              .attr("y", function(d) { return -(d.size/3000);})
+              .attr("height", function(d) {return d.size / 1500;})
+              .attr("width", function(d) {return d.size / 1500;});
           });
 
     var rollover = nodeEnter.append("svg:image")
