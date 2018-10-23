@@ -122,7 +122,7 @@ function update() {
   force.nodes(nodes)
         .links(links)
         .gravity(0.005)
-    .charge(-800)
+    .charge(-500)
     .linkDistance(1)
     .friction(0.2)
     .linkStrength(function(l, i) {return 1; })
