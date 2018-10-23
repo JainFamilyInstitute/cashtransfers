@@ -196,6 +196,8 @@ function detailsOn() {
     close.addEventListener("click",function() {
       details.style.display="none";
     })
+  } else {
+    
   }
 }
 
