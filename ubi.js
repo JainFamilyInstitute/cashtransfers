@@ -172,7 +172,7 @@ title = details.querySelector('h4');
 
 
 function detailsOn() {
-    if(window.innerWidth<=650){
+    if(window.innerWidth<=1650){
     details.style.display="block";
     title.style.display="none";
     close = document.createElement('div');
