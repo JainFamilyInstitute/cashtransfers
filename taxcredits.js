@@ -30,7 +30,6 @@ if(window.innerWidth<=650){
 
 }
 
-
 var vis;
 var force = d3.layout.force(); 
 
@@ -113,8 +112,6 @@ json.forEach(function(d){
   root.y = h / 2.1;
 
  }
-
-
         // Build the path
   var defs = vis.insert("svg:defs")
       .data(["end"]);
@@ -196,8 +193,6 @@ function detailsOn() {
     close.addEventListener("click",function() {
       details.style.display="none";
     })
-  } else {
-    
   }
 }
 

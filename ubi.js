@@ -97,11 +97,21 @@ json.forEach(function(d){
   // 
   console.log(newData);
  
+ if(window.innerWidth<=650){
+
+  root = newData;
+  root.fixed = true;
+  root.x = w /2 ;
+  root.y = h / 2;
+
+ } else {
+
   root = newData;
   root.fixed = true;
   root.x = w /2.2 ;
   root.y = h / 2.1;
 
+ }
         // Build the path
   var defs = vis.insert("svg:defs")
       .data(["end"]);
