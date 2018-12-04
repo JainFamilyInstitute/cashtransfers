@@ -1,3 +1,7 @@
+if( /Firefox|MSIE/i.test(navigator.userAgent) ) {
+    document.querySelector('.alert').style.display="block";
+  };
+
 function caps(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -6,7 +10,6 @@ function caps(string) {
 var tcBlack = "#130C0E";
 
 // rest of vars
-if(window.innerWidth<=650){
 
   var w = window.innerWidth,
     h = window.innerHeight,
@@ -15,19 +18,9 @@ if(window.innerWidth<=650){
     y_browser = 25,
     root;
 
-} else {
-
-  var w = window.innerWidth/1.5,
-    h = window.innerHeight,
-    maxNodeSize = 1,
-    x_browser = 20,
-    y_browser = 25,
-    root;
-
-}
-
 var vis;
 var force = d3.layout.force(); 
+var root;
 
 vis = d3.select("#vis")
   .append("svg")
@@ -93,21 +86,11 @@ json.forEach(function(d){
   // 
   console.log(newData);
  
- if(window.innerWidth<=650){
+    root = newData;
+    root.fixed = true;
+    resize();
 
-  root = newData;
-  root.fixed = true;
-  root.x = w /2 ;
-  root.y = h / 2;
 
- } else {
-
-  root = newData;
-  root.fixed = true;
-  root.x = w /2.2 ;
-  root.y = h / 2.1;
-
- }
         // Build the path
   var defs = vis.insert("svg:defs")
       .data(["end"]);
@@ -120,6 +103,26 @@ json.forEach(function(d){
 });
 
 // functions
+
+function resize() {
+  if(window.innerWidth<=650){
+    root.x = w /2 ;
+    root.y = h / 2;
+  } else if (window.innerWidth<=800){
+    root.x = w /3 ;
+    root.y = h / 2;
+  } else if (window.innerWidth<=900){
+    root.x = w /2.6 ;
+    root.y = h / 2;
+  } else if (window.innerWidth<=1024){
+    root.x = w /3 ;
+    root.y = h /2;
+  } else if (window.innerWidth<=1280){
+    root.x = w /4 ;
+    root.y = h / 3;
+  }
+}
+
 function update() {
   var nodes = flatten(root),
       links = d3.layout.tree().links(nodes);
@@ -127,7 +130,7 @@ function update() {
   force.nodes(nodes)
         .links(links)
         .gravity(0.005)
-    .charge(-800)
+    .charge(-1800)
     .linkDistance(20)
     .friction(0.5)
     .linkStrength(function(l, i) {return 1; })
@@ -179,6 +182,7 @@ title = details.querySelector('h4');
 
 
 function detailsOn() {
+  details.innerHTML="<h4>Tax Credits Documents By Effect</h4><br><h1></h1><h2>Click an item to explore</h2><h3></h3><div id='featured'></div>";
     if(window.innerWidth<=650){
     details.style.display="block";
     title.style.display="none";
@@ -189,7 +193,18 @@ function detailsOn() {
     close.addEventListener("click",function() {
       details.style.display="none";
     })
+    console.log(close.value);
+  } else {
+    title.style.display="block";
+    if(close == undefined){
+      close.style.display="none";
+    }
   }
+}
+
+window.onresize=function() {
+  detailsOn();
+  resize();
 }
 
   var setEvents = images
