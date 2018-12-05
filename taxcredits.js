@@ -124,6 +124,7 @@ function resize() {
      root.x = w /4 ;
     root.y = h / 3;
   }
+}
 
 function update() {
   var nodes = flatten(root),
