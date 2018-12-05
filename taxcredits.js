@@ -185,7 +185,7 @@ title = details.querySelector('h4');
 
 function detailsOn() {
   details.innerHTML="<h4>Tax Credits Documents By Effect</h4><br><h1></h1><h2>Click an item to explore</h2><h3></h3><div id='featured'></div>";
-    if(window.innerWidth<=850){
+    if(window.innerWidth<=650){
     details.style.display="block";
     title.style.display="none";
     close = document.createElement('div');
