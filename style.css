@@ -318,7 +318,7 @@ path.link {
 
    @media screen and (min-width:1400px) and (max-width:1800px){
   #vis {
-    transform:scale(1.5);
-    transform-origin: 0% 0%;
+    transform:scale(3);
+    transform-origin: 28% 98%;
   }
 }
