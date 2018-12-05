@@ -11,25 +11,12 @@ var tcBlack = "#130C0E";
 
 
 // rest of vars
-if(window.innerWidth<=650){
-
-  var w = window.innerWidth,
-    h = window.innerHeight,
-    maxNodeSize = 1,
-    x_browser = 20,
-    y_browser = 25,
-    root;
-
-} else {
-
-  var w = window.innerWidth/1.5,
-    h = window.innerHeight,
-    maxNodeSize = 1,
-    x_browser = 20,
-    y_browser = 25,
-    root;
-
-}
+var w = window.innerWidth,
+  h = window.innerHeight,
+  maxNodeSize = 1,
+  x_browser = 20,
+  y_browser = 25,
+  root;
  
 var vis;
 var force = d3.layout.force(); 
@@ -115,25 +102,24 @@ json.forEach(function(d){
 });
 
 function resize() {
-  var target = document.querySelector('svg');
   if(window.innerWidth<=650){
     root.x = w /2 ;
     root.y = h / 2;
   } else if (window.innerWidth<=800){
-    root.x = w /2 ;
+    root.x = w /3 ;
     root.y = h / 2;
   } else if (window.innerWidth<=900){
-    root.x = w /2 ;
+    root.x = w /2.6 ;
     root.y = h / 2;
-    target.style.transform="scale(1.5)";
   } else if (window.innerWidth<=1024){
-    root.x = w /1.8 ;
+    root.x = w /3 ;
     root.y = h /2;
-    target.style.transform="scale(1.5)";
   } else if (window.innerWidth<=1280){
-    root.x = w /2.5 ;
-    root.y = h / 2.5;
-    target.style.transform="scale(1.5)";
+    root.x = w /4 ;
+    root.y = h / 3;
+  } else if (window.innerWidth>=1281){
+     root.x = w /4 ;
+    root.y = h / 3;
   }
 }
 
