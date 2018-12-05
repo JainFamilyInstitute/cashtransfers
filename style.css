@@ -316,9 +316,9 @@ path.link {
   }
 }
 
-   @media screen and (min-width:1400px) and (max-width:1800px){
+   @media screen and (min-width:1400px){
   #vis {
     transform:scale(3);
-    transform-origin: 28% 98%;
+    transform-origin: 15% 0%;
   }
 }
